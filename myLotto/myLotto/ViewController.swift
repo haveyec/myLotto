@@ -30,6 +30,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let winningNums = numArr[indexPath.row]
         cell.textLabel?.text = String(winningNums)
         
+        if indexPath.row == 6{
+            cell.detailTextLabel?.text = "Bonus"
+        }else{
+            cell.detailTextLabel?.text = ""
+        }
+        
         return cell
     }
     
@@ -58,7 +64,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         repeat {
             numGen()
-        }while numArr.count < 5
+        }while numArr.count < 7
         
     }
     
